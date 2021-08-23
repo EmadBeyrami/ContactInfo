@@ -1,5 +1,5 @@
 # Hedvig Contact Info App with MVVM + Reactive + Coordinator Architect
-Hedvig Contact Info App is a simple app which you can input some data in and save it directly to the user defaults.
+Hedvig Contact Info App is a simple app which you can input some data, validate it and save it directly to the user defaults.
 
 ## To run the project:
 - Make sure to install all pods using pod install in Terminal.
