@@ -7,3 +7,6 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+APP_NAME = Hedvig Dev
+BASE_BUNDLE_ID = com.beyrami.hedvig.Dev
+APP_ICON = AppIcon-Dev

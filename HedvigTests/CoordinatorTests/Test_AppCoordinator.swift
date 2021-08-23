@@ -6,27 +6,70 @@
 //
 
 import XCTest
+@testable import Hedvig
 
-class Test_AppCoordinator: XCTestCase {
+final class AppCoordinatorTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
+    var sut: AppCoordinator?
+    var window: UIWindow?
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        window = nil
+        try? super.tearDownWithError()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    override func setUp() {
+        let nav = UINavigationController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        sut = AppCoordinator(navigationController: nav, window: window)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    override func tearDown() {
+        sut = nil
+        window = nil
+    }
+    
+    func test_start() throws {
+        // given
+        guard let sut = sut else {
+            throw UnitTestError()
         }
+        
+        // when
+        sut.start(animated: false)
+        
+        // then
+        XCTAssertEqual(sut.navigationController.viewControllers.count, 1)
+        let rootVC = sut.navigationController.viewControllers[0] as? FlowControlViewController
+        XCTAssertNotNil(rootVC, "Check if root vsc is FlowControlViewController")
     }
-
+    
+    func test_ToProducts() throws {
+        // given
+        guard let sut = sut else {
+            throw UnitTestError()
+        }
+        // when
+        sut.toInfo()
+        
+        // then
+        XCTAssertTrue(sut.childCoordinators.count == 1)
+        let visibleVC = sut.navigationController.visibleViewController as? InfoViewController
+        XCTAssertNotNil(visibleVC, "Check if presented vc is InfoViewController")
+    }
+    
+    func test_ChildDidFinish() throws {
+        // given
+        guard let sut = sut else {
+            throw UnitTestError()
+        }
+        // when
+        let child = InfoCoordinator(navigationController: sut.navigationController)
+        sut.childCoordinators.append(child)
+        sut.childDidFinish(child)
+        
+        // then
+        XCTAssertTrue(sut.childCoordinators.count == 0)
+    }
 }

@@ -5,3 +5,21 @@
   Created by Emad Bayramy on 8/20/21.
   
 */
+
+"to_Info" = "Till info";
+"infoTitle" = "Info";
+"Change_Language" = "Ändra språk";
+"controllFlowNotelabel" = "Obs! Du kan ändra språket direkt.";
+"dataLossAlert" = "om du avbryter utan att spara all data du har angett kommer att tas bort. Vill du fortsätta?";
+"contactDetails" = "Kontaktuppgifter";
+"phoneNumber" = "Telefonnummer";
+"email" = "E-mail";
+"ok" = "Ok";
+"cancel" = "Avbryt";
+"warning" = "Varning";
+"error" = "Fel";
+"save" = "spara";
+"sameDataError" = "Data du har angett har inte ändrats. avbryt för att avfärda.";
+"emailPhoneError" = "Både e -post och telefonnummer är ogiltiga";
+"emailError"  = "E-mail är inte giltig";
+"phoneError"  = "Telefonnumret är ogiltigt";

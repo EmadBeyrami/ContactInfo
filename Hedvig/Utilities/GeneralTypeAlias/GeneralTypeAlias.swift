@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+// MARK: Completion Closures
+typealias Completion = (() -> Void)
+typealias DataCompletion<T> = ((T) -> Void)
+typealias BoolCompletion = DataCompletion<Bool>
+typealias StringCompletion = DataCompletion<String>

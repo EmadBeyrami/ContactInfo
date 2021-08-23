@@ -9,42 +9,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputCell" id="06b-Zt-zUv" customClass="InputCell" customModule="Hedvig" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputCell" rowHeight="58" id="06b-Zt-zUv" customClass="InputCell" customModule="Hedvig" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06b-Zt-zUv" id="bou-Ho-Cpu">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06b-Zt-zUv" id="bou-Ho-Cpu">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-w6-DC1">
-                        <rect key="frame" x="5" y="5" width="404" height="34"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-w6-DC1">
+                        <rect key="frame" x="20" y="5" width="374" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-jz-mkJ">
-                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-1m-QDf">
-                                <rect key="frame" x="41.5" y="0.0" width="362.5" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-1m-QDf">
+                                <rect key="frame" x="49.5" y="0.0" width="324.5" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="hsx-DO-8rb"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="bRW-w6-DC1" firstAttribute="top" secondItem="bou-Ho-Cpu" secondAttribute="top" constant="5" id="RYx-Vi-WXJ"/>
                     <constraint firstAttribute="bottom" secondItem="bRW-w6-DC1" secondAttribute="bottom" constant="5" id="hYx-Rd-uNp"/>
-                    <constraint firstItem="bRW-w6-DC1" firstAttribute="leading" secondItem="bou-Ho-Cpu" secondAttribute="leading" constant="5" id="jij-1i-1a5"/>
-                    <constraint firstAttribute="trailing" secondItem="bRW-w6-DC1" secondAttribute="trailing" constant="5" id="t2k-9Y-YFA"/>
+                    <constraint firstItem="bRW-w6-DC1" firstAttribute="leading" secondItem="bou-Ho-Cpu" secondAttribute="leading" constant="20" id="jij-1i-1a5"/>
+                    <constraint firstAttribute="trailing" secondItem="bRW-w6-DC1" secondAttribute="trailing" constant="20" id="t2k-9Y-YFA"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="inputTextField" destination="ay1-1m-QDf" id="s3r-Pa-hVC"/>
                 <outlet property="titleLabel" destination="9oX-jz-mkJ" id="AAK-45-KH9"/>
             </connections>
-            <point key="canvasLocation" x="139" y="129"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </tableViewCell>
     </objects>
 </document>
