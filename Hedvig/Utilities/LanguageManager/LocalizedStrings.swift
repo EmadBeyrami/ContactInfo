@@ -10,7 +10,7 @@ import Foundation
 // We can also using swiftgen for generating string files
 enum LocalizedStrings: String {
     
-    case toProducts = "to_Info"
+    case toInfo = "to_Info"
     case changeLanguage = "Change_Language"
     case controllFlowNotelabel
     case contactDetails

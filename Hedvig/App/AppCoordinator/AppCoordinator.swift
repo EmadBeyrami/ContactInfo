@@ -76,9 +76,9 @@ extension AppCoordinator: UINavigationControllerDelegate {
             return
         }
         
-        // We’re still here – it means we’re popping the view controller, so we can check whether it’s a products view controller
-        if let productsViewController = fromViewController as? InfoViewController {
-            childDidFinish(productsViewController.coordinator)
+        // We’re still here – it means we’re popping the view controller, so we can check whether it’s a info view controller
+        if let infoViewController = fromViewController as? InfoViewController {
+            childDidFinish(infoViewController.coordinator)
         }
     }
 }

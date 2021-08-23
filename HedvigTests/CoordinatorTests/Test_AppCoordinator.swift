@@ -45,7 +45,7 @@ final class AppCoordinatorTests: XCTestCase {
         XCTAssertNotNil(rootVC, "Check if root vsc is FlowControlViewController")
     }
     
-    func test_ToProducts() throws {
+    func test_ToInfo() throws {
         // given
         guard let sut = sut else {
             throw UnitTestError()

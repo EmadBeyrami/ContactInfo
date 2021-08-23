@@ -83,7 +83,7 @@ class FlowControlViewController: UIViewController, Storyboarded {
         
         // toInfoButton
         toInfoButton.backgroundColor = .hedvigPurple
-        toInfoButton.setTitle(LocalizedStrings.toProducts.value, for: .normal)
+        toInfoButton.setTitle(LocalizedStrings.toInfo.value, for: .normal)
         toInfoButton.setTitleColor(.white, for: .normal)
         toInfoButton.setAttributed(size: 15)
         toInfoButton.addTarget(self, action: #selector(toInfo), for: .touchUpInside)
